@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="Stdout" class="ch.qos.logback.core.ConsoleAppender">
+	 
+		<encoder>
+			<pattern>%d{HH:mm.ss.SSS} logging[%thread] %-5level %logger{5} - %msg%n </pattern>
+		</encoder>
+		
+	</appender>
+
+	<!-- <logger name="com.subra" level="INFO" additivity="false"> -->
+		
+	<logger name="com.subra" level="DEBUG" additivity="false"> 
+		<appender-ref ref="Stdout" />
+	</logger>
+	
+	<root level="DEBUG">
+		<appender-ref ref="Stdout" />
+	</root>
+
+
+</configuration>
